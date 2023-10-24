@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary" >
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" style="font-size:20px;">
+
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <b>DEPARTMENT</b>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">ComputerScience</a>
+            <a class="dropdown-item" href="#">Commerce</a>
+            <a class="dropdown-item" href="#">Chemistry</a>
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Physics</a>
+         </div>
+        </li>&nbsp;
+        {% if user.is_authenticated %}
+        <li class="nav-item text-white">
+          hello {{user.username}}
+        </li>&nbsp;
+        <li class="nav-item">
+          <a class="nav-link text-white " href="{% url 'store_app:logout' %}"><b>Logout</b></a>
+        </li>&nbsp;
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link text-white " href="{% url 'store_app:login' %}"><b>Login</b></a>
+        </li>&nbsp;
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'store_app:register' %}"><b>Register</b></a>
+        </li>&nbsp;
+        {% endif %}
+      </ul>
+    </div>
+</nav>

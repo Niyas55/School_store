@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div  align="center">
+    <h1 style="padding-top:25px;font-size:80px;color:white;"><b>Login Page</b></h1>
+    <div align="center" style="padding-top:50px;">
+<form action="" method="post">
+  {% csrf_token %}
+  <input type="text" name="username" placeholder="enter your user name" ><br>
+  <input type="password" name="password" placeholder="enter your password" ><br>
+  <input type="submit">
+</form>
+        </div >
+    <div align="center" style="padding-top:15px;color:white;padding-right:100px;"><a href="{% url 'store_app:register' %}">Register</a> </div>
+    </div>
+</body>
+</html>
+{% endblock %}

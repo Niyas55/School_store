@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="padding-top:25px;padding-left:350px;">
+    <form action="" method="post">
+        {% csrf_token %}
+                      <b style="font-size:25px;padding-right:187px;color:white;">NAME</b>:<b>&nbsp;<input type="text" name="name" placeholder="enter your name"><br>
+                      <b style="font-size:25px;padding-right:205px;color:white;">DOB</b>:<b>&nbsp;<input type="date" name="dob"><br>
+                    <b style="font-size:25px;padding-right:209px;color:white;">AGE</b>:<b>&nbsp;<input type="text" name="y" placeholder="enter your age"><br>
+                      <b style="font-size:25px;padding-right:158px;color:white;">GENDER</b>:<b>&nbsp;<input type="radio" name="g"  value="male" >&nbsp;<b style="color:white;">male</b>&nbsp;&nbsp;&nbsp;<input type="radio" name="g"  value="female">&nbsp;<b style="color:white;">female</b><br>
+                      <b style="font-size:25px;padding-right:50px;color:white;">PHONE NUMBER</b>:<b>&nbsp;<input type="tel" name="ph" placeholder="enter your phone number"><br>
+                        <b style="font-size:25px;padding-right:157px;color:white;">MAIL ID</b>:<b>&nbsp;<input type="email" name="mail" placeholder="enter your email"><br>
+                          <b style="font-size:25px;padding-right:142px;color:white;">ADDRESS</b>:<b>&nbsp;<input type="text" name="address" placeholder="enter your address"><br>
+                              <b style="font-size:25px;padding-right:82px;color:white;">DEPARTMENT</b><B>:</B>&nbsp;
+                          <select name="dept" id="dropdown">
+                                <option value="ComputerScience" >ComputerScience</option>
+                                <option value="Commerce">Commerce</option>
+                                 <option value="Chemistry">Chemistry</option>
+                                 <option value="English">English</option>
+                                 <option value="Physics">Physics</option>
+                         </select><br>
+                                            <b style="font-size:25px;padding-right:144px;color:white;">COURSES</b><B>:</B>&nbsp;<select name="cors">
+                                                    <option>BCOM</option>
+                                                    <option>BBA</option>
+                                                    <option>MBA</option>
+                                                    <option>MCOM</option>
+                                                    <option>BA</option>
+                                                    <option>MA</option>
+                                                    <option>MSC</option>
+                                                    <option>MCA</option>
+                                                    <option>BCA</option>
+                                                    <option>BSC</option>
+                                                </select><br>
+                                           <b style="font-size:25px;padding-right:141px;color:white;">PURPOSE</b><B>:</B>&nbsp;<select name="purp">
+                                               <option>For Enquirey</option>
+                                               <option>Place Order</option>
+                                               <option>Return</option>
+                                            </select><br>
+                                            <b style="font-size:25px;padding-right:7px;color:white;">MATERIAL PROVIDE</b><B>:</B>&nbsp;<b style="padding-left:10px;padding-right:56px;color:white;">Note Book</b><input type="checkbox" name="mp" value="Note_book"><br>
+                                            <b style="padding-left:276px;padding-right:111px;color:white;">Pen</b><input type="checkbox" name="mp" value="Pen"><br>
+                                            <b style="padding-left:276px;padding-right:38px;color:white;">Exam Papper</b><input type="checkbox" name="mp" value="Exam_papper"><br>
+                                            <b style="padding-left:276px;padding-right:10px;color:white;">Question Papper</b><input type="checkbox" name="mp" value="Question_papper"><br><br>
+                                            <b style="padding-left:150px;padding-top:100px;"><input type="submit" value="save"></b><b style="padding-left:20px;"><input type="reset"></b><br>
+                                            <b><a href="#">HOME</a> </b>
+        </form>
+    </div>
+{% endblock %}
